@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — AI Safety Research</title>
+<meta name="description" content="Research notes and projects on AI safety: interpretability, evaluations, and alignment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-id">
+      <span class="nav-name">Your Name</span>
+      <span class="nav-role">AI Safety Research</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#beliefs">Beliefs</a>
+      <a href="#direction">Direction</a>
+      <a href="#projects">Projects</a>
+      <a href="#notes">Notes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Calibration check — <span id="hero-date"></span></p>
+      <h1 class="hero-headline">
+        I work on making powerful AI systems <em>legible</em> before they are made <em>capable</em>.
+      </h1>
+      <p class="hero-sub">
+        I'm an AI safety researcher focused on interpretability, evaluations, and the gap between
+        what models can do and what we can verify they'll do. This site tracks my current beliefs,
+        the questions I'm working on, and the projects that come out of them — updated as my
+        confidence changes, not as a fixed résumé.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">See current projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CALIBRATION STRIP — signature element -->
+  <section class="calibration" id="beliefs">
+    <div class="section-inner">
+      <p class="section-eyebrow">// calibrated beliefs</p>
+      <h2 class="section-title">Some things I believe, and how sure I am</h2>
+      <p class="section-lede">
+        Forecasting is a habit, not a credential. These are working estimates, not conclusions —
+        hover a bar to see why I hold it, and where I'd update.
+      </p>
+
+      <div class="cal-list" role="list">
+
+        <div class="cal-row" role="listitem">
+          <div class="cal-text">
+            <p class="cal-claim">Interpretability tools will catch a deceptive model before a governance process does</p>
+            <p class="cal-reason">Tooling is improving faster than institutional response times — but this is a race, not a guarantee.</p>
+          </div>
+          <div class="cal-meter" aria-label="42 percent confidence">
+            <div class="cal-track"><div class="cal-fill" data-target="42" style="--c: var(--amber)"></div></div>
+            <span class="cal-pct" data-target="42">0%</span>
+          </div>
+        </div>
+
+        <div class="cal-row" role="listitem">
+          <div class="cal-text">
+            <p class="cal-claim">Current pre-deployment evals catch most dangerous capabilities</p>
+            <p class="cal-reason">Evals are good at what they're built to test for, and blind to what they weren't. That asymmetry worries me.</p>
+          </div>
+          <div class="cal-meter" aria-label="28 percent confidence">
+            <div class="cal-track"><div class="cal-fill" data-target="28" style="--c: var(--rose)"></div></div>
+            <span class="cal-pct" data-target="28">0%</span>
+          </div>
+        </div>
+
+        <div class="cal-row" role="listitem">
+          <div class="cal-text">
+            <p class="cal-claim">Alignment techniques that work on today's models will scale to more capable ones</p>
+            <p class="cal-reason">Some will, most won't unmodified. I'd raise this if we get one clean transfer result on a frontier model.</p>
+          </div>
+          <div class="cal-meter" aria-label="46 percent confidence">
+            <div class="cal-track"><div class="cal-fill" data-target="46" style="--c: var(--amber)"></div></div>
+            <span class="cal-pct" data-target="46">0%</span>
+          </div>
+        </div>
+
+        <div class="cal-row" role="listitem">
+          <div class="cal-text">
+            <p class="cal-claim">Red-teaming by external researchers materially changes what gets shipped</p>
+            <p class="cal-reason">When labs act on findings, it's real leverage. The variance between labs is the whole story here.</p>
+          </div>
+          <div class="cal-meter" aria-label="61 percent confidence">
+            <div class="cal-track"><div class="cal-fill" data-target="61" style="--c: var(--teal)"></div></div>
+            <span class="cal-pct" data-target="61">0%</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH DIRECTION -->
+  <section class="direction" id="direction">
+    <div class="section-inner">
+      <p class="section-eyebrow">// research direction</p>
+      <h2 class="section-title">What I'm actually working on</h2>
+
+      <div class="pillar-grid">
+
+        <article class="pillar-card">
+          <div class="pillar-head">
+            <span class="pillar-tag tag-active">active</span>
+            <h3>Interpretability</h3>
+          </div>
+          <p class="pillar-claim">
+            "If a model is doing something concerning internally, we should be able to point to
+            where, without relying on its output alone."
+          </p>
+          <p class="pillar-body">
+            Mechanistic and representation-level methods for surfacing what a model is actually
+            representing — with an eye toward tools a non-specialist team could actually run.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-head">
+            <span class="pillar-tag tag-active">active</span>
+            <h3>Evaluations &amp; red-teaming</h3>
+          </div>
+          <p class="pillar-claim">
+            "An eval is only as trustworthy as the failure modes it was designed to miss."
+          </p>
+          <p class="pillar-body">
+            Building and breaking evaluation suites for dangerous capabilities, with a focus on
+            adversarial coverage rather than benchmark scores.
+          </p>
+        </article>
+
+        <article class="pillar-card">
+          <div class="pillar-head">
+            <span class="pillar-tag tag-explore">exploring</span>
+            <h3>Governance &amp; policy interfaces</h3>
+          </div>
+          <p class="pillar-claim">
+            "Technical findings only matter if they reach the people deciding what ships."
+          </p>
+          <p class="pillar-body">
+            Translating interpretability and eval results into artifacts — safety cases, model
+            cards, incident reports — that policy and governance teams can actually use.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow">// projects</p>
+      <h2 class="section-title">Projects</h2>
+
+      <div class="project-list">
+
+        <article class="project-row">
+          <div class="project-status status-ongoing">ongoing</div>
+          <div class="project-body">
+            <h3>Project name one</h3>
+            <p>One sentence on what this project is and what question it's trying to answer.</p>
+            <div class="project-tags"><span>interpretability</span><span>python</span></div>
+          </div>
+          <a class="project-link" href="#">View →</a>
+        </article>
+
+        <article class="project-row">
+          <div class="project-status status-published">published</div>
+          <div class="project-body">
+            <h3>Project name two</h3>
+            <p>One sentence on what this project is and what question it's trying to answer.</p>
+            <div class="project-tags"><span>evaluations</span><span>red-teaming</span></div>
+          </div>
+          <a class="project-link" href="#">View →</a>
+        </article>
+
+        <article class="project-row">
+          <div class="project-status status-exploring">exploring</div>
+          <div class="project-body">
+            <h3>Project name three</h3>
+            <p>One sentence on what this project is and what question it's trying to answer.</p>
+            <div class="project-tags"><span>governance</span><span>writing</span></div>
+          </div>
+          <a class="project-link" href="#">View →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTES -->
+  <section class="notes" id="notes">
+    <div class="section-inner">
+      <p class="section-eyebrow">// notes</p>
+      <h2 class="section-title">Notes</h2>
+      <p class="section-lede">Short write-ups — half-formed ideas as often as finished ones.</p>
+
+      <div class="notes-list">
+        <a class="note-row" href="#">
+          <span class="note-date">2026.06</span>
+          <span class="note-title">Why most evals are testing the wrong threat model</span>
+          <span class="note-arrow">→</span>
+        </a>
+        <a class="note-row" href="#">
+          <span class="note-date">2026.05</span>
+          <span class="note-title">A small experiment in probing for deceptive reasoning</span>
+          <span class="note-arrow">→</span>
+        </a>
+        <a class="note-row" href="#">
+          <span class="note-date">2026.03</span>
+          <span class="note-title">Reading list: interpretability papers I keep coming back to</span>
+          <span class="note-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="section-inner contact-inner">
+    <div>
+      <p class="section-eyebrow">// get in touch</p>
+      <h2 class="section-title">Open to collaboration on interpretability and evals work.</h2>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="https://github.com/fahdev789" target="_blank" rel="noopener">github.com/fahdev789</a>
+      <a href="#">linkedin</a>
+      <a href="#">twitter / x</a>
+    </div>
+  </div>
+  <p class="foot-note">Built and maintained by hand. Last recalibrated <span id="foot-date"></span>.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
