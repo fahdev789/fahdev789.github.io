@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Your Name — AI Safety Research</title>
-<meta name="description" content="Research notes and projects on AI safety: interpretability, evaluations, and alignment.">
+<title>Fahad Ali — AI Safety Research</title>
+<meta name="description" content="Fahad Ali’s research portfolio on AI safety, chain-of-thought controllability, capability evaluations, and model behaviour.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 <header class="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-id">
-      <span class="nav-name">Your Name</span>
+      <span class="nav-name">Fahad Ali</span>
       <span class="nav-role">AI Safety Research</span>
     </a>
     <nav class="nav-links">
@@ -37,13 +37,13 @@
     <div class="hero-inner">
       <p class="eyebrow">Calibration check — <span id="hero-date"></span></p>
       <h1 class="hero-headline">
-        I work on making powerful AI systems <em>legible</em> before they are made <em>capable</em>.
+        I study whether reasoning models follow constraints <em>internally</em>, not only in their <em>final answers</em>.
       </h1>
       <p class="hero-sub">
-        I'm an AI safety researcher focused on interpretability, evaluations, and the gap between
-        what models can do and what we can verify they'll do. This site tracks my current beliefs,
-        the questions I'm working on, and the projects that come out of them — updated as my
-        confidence changes, not as a fixed résumé.
+        I'm an independent AI safety researcher and machine-learning engineer focused on model evaluations,
+        chain-of-thought controllability, capability elicitation, and the gap between observed behaviour
+        and what we can reliably verify. This site tracks my current research questions, experiments,
+        and evidence as they develop.
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">See current projects</a>
@@ -178,31 +178,31 @@
         <article class="project-row">
           <div class="project-status status-ongoing">ongoing</div>
           <div class="project-body">
-            <h3>Project name one</h3>
-            <p>One sentence on what this project is and what question it's trying to answer.</p>
-            <div class="project-tags"><span>interpretability</span><span>python</span></div>
+            <h3>WordBoundaryBench</h3>
+            <p>Evaluates whether reasoning models can obey forbidden-word constraints in both their reasoning traces and final answers.</p>
+            <div class="project-tags"><span>evaluations</span><span>chain-of-thought</span></div>
           </div>
-          <a class="project-link" href="#">View →</a>
+          <a class="project-link" href="https://fahdev789.github.io/WordBoundaryBench/" target="_blank" rel="noopener">View →</a>
         </article>
 
         <article class="project-row">
           <div class="project-status status-published">published</div>
           <div class="project-body">
-            <h3>Project name two</h3>
-            <p>One sentence on what this project is and what question it's trying to answer.</p>
-            <div class="project-tags"><span>evaluations</span><span>red-teaming</span></div>
+            <h3>CoTControl</h3>
+            <p>Reproduces and extends experiments comparing control over a model’s reasoning process with control over its final output.</p>
+            <div class="project-tags"><span>reasoning models</span><span>evaluation</span></div>
           </div>
-          <a class="project-link" href="#">View →</a>
+          <a class="project-link" href="https://github.com/fahdev789/CoTControl" target="_blank" rel="noopener">View →</a>
         </article>
 
         <article class="project-row">
-          <div class="project-status status-exploring">exploring</div>
+          <div class="project-status status-ongoing">ongoing</div>
           <div class="project-body">
-            <h3>Project name three</h3>
-            <p>One sentence on what this project is and what question it's trying to answer.</p>
-            <div class="project-tags"><span>governance</span><span>writing</span></div>
+            <h3>CapabilityElicitationBench</h3>
+            <p>Tests how prompting, reasoning context, and ablations affect the elicitation of concerning model behaviours.</p>
+            <div class="project-tags"><span>capability elicitation</span><span>ablations</span></div>
           </div>
-          <a class="project-link" href="#">View →</a>
+          <a class="project-link" href="https://github.com/fahdev789/CapabilityElicitationBench" target="_blank" rel="noopener">View →</a>
         </article>
 
       </div>
@@ -217,19 +217,19 @@
       <p class="section-lede">Short write-ups — half-formed ideas as often as finished ones.</p>
 
       <div class="notes-list">
-        <a class="note-row" href="#">
+        <a class="note-row" href="https://github.com/fahdev789/CapabilityElicitationBench" target="_blank" rel="noopener">
+          <span class="note-date">2026.07</span>
+          <span class="note-title">Ablating model-generated reasoning in capability evaluations</span>
+          <span class="note-arrow">→</span>
+        </a>
+        <a class="note-row" href="https://fahdev789.github.io/WordBoundaryBench/" target="_blank" rel="noopener">
+          <span class="note-date">2026.07</span>
+          <span class="note-title">Reasoning constraints versus final-answer compliance</span>
+          <span class="note-arrow">→</span>
+        </a>
+        <a class="note-row" href="https://github.com/fahdev789/CoTControl" target="_blank" rel="noopener">
           <span class="note-date">2026.06</span>
-          <span class="note-title">Why most evals are testing the wrong threat model</span>
-          <span class="note-arrow">→</span>
-        </a>
-        <a class="note-row" href="#">
-          <span class="note-date">2026.05</span>
-          <span class="note-title">A small experiment in probing for deceptive reasoning</span>
-          <span class="note-arrow">→</span>
-        </a>
-        <a class="note-row" href="#">
-          <span class="note-date">2026.03</span>
-          <span class="note-title">Reading list: interpretability papers I keep coming back to</span>
+          <span class="note-title">Building a benchmark for chain-of-thought controllability</span>
           <span class="note-arrow">→</span>
         </a>
       </div>
@@ -242,13 +242,12 @@
   <div class="section-inner contact-inner">
     <div>
       <p class="section-eyebrow">// get in touch</p>
-      <h2 class="section-title">Open to collaboration on interpretability and evals work.</h2>
+      <h2 class="section-title">Open to collaboration on model evaluations, chain-of-thought research, and AI safety.</h2>
     </div>
     <div class="contact-links">
-      <a href="mailto:you@example.com">you@example.com</a>
+      <a href="mailto:afahad8990@gmail.com">afahad8990@gmail.com</a>
       <a href="https://github.com/fahdev789" target="_blank" rel="noopener">github.com/fahdev789</a>
-      <a href="#">linkedin</a>
-      <a href="#">twitter / x</a>
+      <a href="https://www.linkedin.com/in/fahad-ali-33b4862b5/" target="_blank" rel="noopener">linkedin.com/in/fahad-ali-33b4862b5</a>
     </div>
   </div>
   <p class="foot-note">Built and maintained by hand. Last recalibrated <span id="foot-date"></span>.</p>
