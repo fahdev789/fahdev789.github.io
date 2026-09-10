@@ -3,256 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fahad Ali — AI Safety Research</title>
-<meta name="description" content="Fahad Ali’s research portfolio on AI safety, chain-of-thought controllability, capability evaluations, and model behaviour.">
+<title>Fahad Ali — AI Safety & Evaluation Research</title>
+<meta name="description" content="Fahad Ali's research portfolio on reasoning models, AI safety, evaluations, chain-of-thought controllability, and model behaviour.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="grain"></div>
-
 <header class="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-id">
       <span class="nav-name">Fahad Ali</span>
-      <span class="nav-role">AI Safety Research</span>
+      <span class="nav-role">AI Safety · Evaluation Research</span>
     </a>
     <nav class="nav-links">
-      <a href="#beliefs">Beliefs</a>
       <a href="#direction">Direction</a>
       <a href="#projects">Projects</a>
+      <a href="#beliefs">Beliefs</a>
       <a href="#notes">Notes</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
-
 <main id="top">
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">Calibration check — <span id="hero-date"></span></p>
-      <h1 class="hero-headline">
-        I study whether reasoning models follow constraints <em>internally</em>, not only in their <em>final answers</em>.
-      </h1>
-      <p class="hero-sub">
-        I'm an independent AI safety researcher and machine-learning engineer focused on model evaluations,
-        chain-of-thought controllability, capability elicitation, and the gap between observed behaviour
-        and what we can reliably verify. This site tracks my current research questions, experiments,
-        and evidence as they develop.
-      </p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">See current projects</a>
-        <a href="#contact" class="btn btn-ghost">Get in touch</a>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">
+      Research log — <span id="hero-date"></span>
+    </p>
+    <h1 class="hero-headline">
+      I study where <em>reasoning behaviour</em> and final answers come apart.
+    </h1>
+    <p class="hero-sub">
+      I'm an independent AI safety researcher and machine-learning engineer
+      focused on reasoning models, evaluations, chain-of-thought controllability,
+      capability elicitation, and the gap between what a model appears to reason
+      about and what its final answer actually complies with.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">
+        See current research
+      </a>
+      <a href="https://github.com/fahdev789"
+         class="btn btn-ghost"
+         target="_blank"
+         rel="noopener">
+        GitHub
+      </a>
     </div>
-  </section>
-
-  <!-- CALIBRATION STRIP — signature element -->
-  <section class="calibration" id="beliefs">
-    <div class="section-inner">
-      <p class="section-eyebrow">// calibrated beliefs</p>
-      <h2 class="section-title">Some things I believe, and how sure I am</h2>
-      <p class="section-lede">
-        Forecasting is a habit, not a credential. These are working estimates, not conclusions —
-        hover a bar to see why I hold it, and where I'd update.
-      </p>
-
-      <div class="cal-list" role="list">
-
-        <div class="cal-row" role="listitem">
-          <div class="cal-text">
-            <p class="cal-claim">Interpretability tools will catch a deceptive model before a governance process does</p>
-            <p class="cal-reason">Tooling is improving faster than institutional response times — but this is a race, not a guarantee.</p>
-          </div>
-          <div class="cal-meter" aria-label="42 percent confidence">
-            <div class="cal-track"><div class="cal-fill" data-target="42" style="--c: var(--amber)"></div></div>
-            <span class="cal-pct" data-target="42">0%</span>
+  </div>
+</section>
+<!-- RESEARCH DIRECTION -->
+<section class="direction" id="direction">
+  <div class="section-inner">
+    <p class="section-eyebrow">// research direction</p>
+    <h2 class="section-title">
+      What I'm actually working on
+    </h2>
+    <div class="pillar-grid">
+      <article class="pillar-card">
+        <div class="pillar-head">
+          <span class="pillar-tag tag-active">active</span>
+          <h3>Reasoning &amp; compliance</h3>
+        </div>
+        <p class="pillar-claim">
+          "A strong reasoning trace does not guarantee a compliant final answer."
+        </p>
+        <p class="pillar-body">
+          Testing whether reasoning models can satisfy constraints internally
+          and in their final outputs, and measuring when those behaviours
+          decouple.
+        </p>
+      </article>
+      <article class="pillar-card">
+        <div class="pillar-head">
+          <span class="pillar-tag tag-active">active</span>
+          <h3>Evaluations &amp; red-teaming</h3>
+        </div>
+        <p class="pillar-claim">
+          "The useful eval is the one that exposes a failure we did not already expect."
+        </p>
+        <p class="pillar-body">
+          Building controlled evaluations, adversarial tests, and
+          capability-elicitation experiments that probe beyond benchmark scores.
+        </p>
+      </article>
+      <article class="pillar-card">
+        <div class="pillar-head">
+          <span class="pillar-tag tag-active">active</span>
+          <h3>Interpretability &amp; monitoring</h3>
+        </div>
+        <p class="pillar-claim">
+          "Behavioural evidence becomes stronger when we can inspect what changes underneath it."
+        </p>
+        <p class="pillar-body">
+          Exploring attention, entropy, representations, and lightweight
+          monitoring signals for detecting changes in model behaviour.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="section-inner">
+    <p class="section-eyebrow">// current research</p>
+    <h2 class="section-title">
+      Experiments and projects
+    </h2>
+    <p class="section-lede">
+      Small, reproducible investigations into how reasoning models behave
+      under constraints. Findings are treated as evidence to update on,
+      not conclusions to defend.
+    </p>
+    <div class="project-list">
+      <!-- FEATURED -->
+      <article class="project-row project-featured">
+        <div class="project-status status-ongoing">
+          active
+        </div>
+        <div class="project-body">
+          <h3>
+            Reasoning–Answer Compliance Gap
+          </h3>
+          <p>
+            Investigating why a reasoning model can appear to reason correctly
+            while its final answer fails a constraint. The work separates
+            reasoning-level behaviour from final-answer compliance and tests
+            the gap with controlled evaluations.
+          </p>
+          <div class="project-tags">
+            <span>reasoning models</span>
+            <span>compliance</span>
+            <span>evaluations</span>
           </div>
         </div>
-
-        <div class="cal-row" role="listitem">
-          <div class="cal-text">
-            <p class="cal-claim">Current pre-deployment evals catch most dangerous capabilities</p>
-            <p class="cal-reason">Evals are good at what they're built to test for, and blind to what they weren't. That asymmetry worries me.</p>
-          </div>
-          <div class="cal-meter" aria-label="28 percent confidence">
-            <div class="cal-track"><div class="cal-fill" data-target="28" style="--c: var(--rose)"></div></div>
-            <span class="cal-pct" data-target="28">0%</span>
-          </div>
-        </div>
-
-        <div class="cal-row" role="listitem">
-          <div class="cal-text">
-            <p class="cal-claim">Alignment techniques that work on today's models will scale to more capable ones</p>
-            <p class="cal-reason">Some will, most won't unmodified. I'd raise this if we get one clean transfer result on a frontier model.</p>
-          </div>
-          <div class="cal-meter" aria-label="46 percent confidence">
-            <div class="cal-track"><div class="cal-fill" data-target="46" style="--c: var(--amber)"></div></div>
-            <span class="cal-pct" data-target="46">0%</span>
-          </div>
-        </div>
-
-        <div class="cal-row" role="listitem">
-          <div class="cal-text">
-            <p class="cal-claim">Red-teaming by external researchers materially changes what gets shipped</p>
-            <p class="cal-reason">When labs act on findings, it's real leverage. The variance between labs is the whole story here.</p>
-          </div>
-          <div class="cal-meter" aria-label="61 percent confidence">
-            <div class="cal-track"><div class="cal-fill" data-target="61" style="--c: var(--teal)"></div></div>
-            <span class="cal-pct" data-target="61">0%</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- RESEARCH DIRECTION -->
-  <section class="direction" id="direction">
-    <div class="section-inner">
-      <p class="section-eyebrow">// research direction</p>
-      <h2 class="section-title">What I'm actually working on</h2>
-
-      <div class="pillar-grid">
-
-        <article class="pillar-card">
-          <div class="pillar-head">
-            <span class="pillar-tag tag-active">active</span>
-            <h3>Interpretability</h3>
-          </div>
-          <p class="pillar-claim">
-            "If a model is doing something concerning internally, we should be able to point to
-            where, without relying on its output alone."
-          </p>
-          <p class="pillar-body">
-            Mechanistic and representation-level methods for surfacing what a model is actually
-            representing — with an eye toward tools a non-specialist team could actually run.
-          </p>
-        </article>
-
-        <article class="pillar-card">
-          <div class="pillar-head">
-            <span class="pillar-tag tag-active">active</span>
-            <h3>Evaluations &amp; red-teaming</h3>
-          </div>
-          <p class="pillar-claim">
-            "An eval is only as trustworthy as the failure modes it was designed to miss."
-          </p>
-          <p class="pillar-body">
-            Building and breaking evaluation suites for dangerous capabilities, with a focus on
-            adversarial coverage rather than benchmark scores.
-          </p>
-        </article>
-
-        <article class="pillar-card">
-          <div class="pillar-head">
-            <span class="pillar-tag tag-explore">exploring</span>
-            <h3>Governance &amp; policy interfaces</h3>
-          </div>
-          <p class="pillar-claim">
-            "Technical findings only matter if they reach the people deciding what ships."
-          </p>
-          <p class="pillar-body">
-            Translating interpretability and eval results into artifacts — safety cases, model
-            cards, incident reports — that policy and governance teams can actually use.
-          </p>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <div class="section-inner">
-      <p class="section-eyebrow">// projects</p>
-      <h2 class="section-title">Projects</h2>
-
-      <div class="project-list">
-
-        <article class="project-row">
-          <div class="project-status status-ongoing">ongoing</div>
-          <div class="project-body">
-            <h3>WordBoundaryBench</h3>
-            <p>Evaluates whether reasoning models can obey forbidden-word constraints in both their reasoning traces and final answers.</p>
-            <div class="project-tags"><span>evaluations</span><span>chain-of-thought</span></div>
-          </div>
-          <a class="project-link" href="https://fahdev789.github.io/WordBoundaryBench/" target="_blank" rel="noopener">View →</a>
-        </article>
-
-        <article class="project-row">
-          <div class="project-status status-published">published</div>
-          <div class="project-body">
-            <h3>CoTControl</h3>
-            <p>Reproduces and extends experiments comparing control over a model’s reasoning process with control over its final output.</p>
-            <div class="project-tags"><span>reasoning models</span><span>evaluation</span></div>
-          </div>
-          <a class="project-link" href="https://github.com/fahdev789/CoTControl" target="_blank" rel="noopener">View →</a>
-        </article>
-
-        <article class="project-row">
-          <div class="project-status status-ongoing">ongoing</div>
-          <div class="project-body">
-            <h3>CapabilityElicitationBench</h3>
-            <p>Tests how prompting, reasoning context, and ablations affect the elicitation of concerning model behaviours.</p>
-            <div class="project-tags"><span>capability elicitation</span><span>ablations</span></div>
-          </div>
-          <a class="project-link" href="https://github.com/fahdev789/CapabilityElicitationBench" target="_blank" rel="noopener">View →</a>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTES -->
-  <section class="notes" id="notes">
-    <div class="section-inner">
-      <p class="section-eyebrow">// notes</p>
-      <h2 class="section-title">Notes</h2>
-      <p class="section-lede">Short write-ups — half-formed ideas as often as finished ones.</p>
-
-      <div class="notes-list">
-        <a class="note-row" href="https://github.com/fahdev789/CapabilityElicitationBench" target="_blank" rel="noopener">
-          <span class="note-date">2026.07</span>
-          <span class="note-title">Ablating model-generated reasoning in capability evaluations</span>
-          <span class="note-arrow">→</span>
+        <a class="project-link"
+           href="https://github.com/fahdev789/WordBoundaryBench"
+           target="_blank"
+           rel="noopener">
+          Case study →
         </a>
-        <a class="note-row" href="https://fahdev789.github.io/WordBoundaryBench/" target="_blank" rel="noopener">
-          <span class="note-date">2026.07</span>
-          <span class="note-title">Reasoning constraints versus final-answer compliance</span>
-          <span class="note-arrow">→</span>
+      </article>
+      <!-- WORDBOUNDARY -->
+      <article class="project-row">
+        <div class="project-status status-ongoing">
+          ongoing
+        </div>
+        <div class="project-body">
+          <h3>
+            WordBoundaryBench
+          </h3>
+          <p>
+            A benchmark for constraint compliance across reasoning traces
+            and final answers, including multiple conditions and repair behaviour.
+          </p>
+          <div class="project-tags">
+            <span>benchmarking</span>
+            <span>chain-of-thought</span>
+          </div>
+        </div>
+        <a class="project-link"
+           href="https://github.com/fahdev789/WordBoundaryBench"
+           target="_blank"
+           rel="noopener">
+          GitHub →
         </a>
-        <a class="note-row" href="https://github.com/fahdev789/CoTControl" target="_blank" rel="noopener">
-          <span class="note-date">2026.06</span>
-          <span class="note-title">Building a benchmark for chain-of-thought controllability</span>
-          <span class="note-arrow">→</span>
+      </article>
+      <!-- COT CONTROL -->
+      <article class="project-row">
+        <div class="project-status status-published">
+          published
+        </div>
+        <div class="project-body">
+          <h3>
+            CoTControl
+          </h3>
+          <p>
+            Experiments on controllability of a model's reasoning process
+            versus its final output, including the relationship between
+            reasoning length and control.
+          </p>
+          <div class="project-tags">
+            <span>reasoning</span>
+            <span>controllability</span>
+          </div>
+        </div>
+        <a class="project-link"
+           href="https://github.com/fahdev789/CoTControl"
+           target="_blank"
+           rel="noopener">
+          GitHub →
         </a>
+      </article>
+      <!-- EVAL AWARENESS -->
+      <article class="project-row">
+        <div class="project-status status-ongoing">
+          ongoing
+        </div>
+        <div class="project-body">
+          <h3>
+            Eval Awareness Case Study
+          </h3>
+          <p>
+            Experiments on how models respond to evaluation context and how
+            evaluation awareness can affect measured behaviour.
+          </p>
+          <div class="project-tags">
+            <span>eval awareness</span>
+            <span>model behaviour</span>
+          </div>
+        </div>
+        <a class="project-link"
+           href="https://github.com/fahdev789/eval-awareness-fahad-case-study"
+           target="_blank"
+           rel="noopener">
+          GitHub →
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- CALIBRATED BELIEFS -->
+<section class="calibration" id="beliefs">
+  <div class="section-inner">
+    <p class="section-eyebrow">// calibrated beliefs</p>
+    <h2 class="section-title">
+      Some things I believe, and how sure I am
+    </h2>
+    <p class="section-lede">
+      Forecasting is a habit, not a credential. These are working estimates,
+      not conclusions — and I expect the numbers to change with evidence.
+    </p>
+    <div class="cal-list">
+      <div class="cal-row">
+        <div class="cal-text">
+          <p class="cal-claim">
+            Current pre-deployment evals catch most dangerous capabilities
+          </p>
+          <p class="cal-reason">
+            Evals are good at what they're built to test for, and blind to
+            what they weren't. That asymmetry worries me.
+          </p>
+        </div>
+        <div class="cal-meter"
+             aria-label="28 percent confidence">
+          <div class="cal-track">
+            <div class="cal-fill"
+                 data-target="28"
+                 style="--c: var(--rose)">
+            </div>
+          </div>
+          <span class="cal-pct">
+            0%
+          </span>
+        </div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-text">
+          <p class="cal-claim">
+            Interpretability tools will become practical parts of model monitoring
+          </p>
+          <p class="cal-reason">
+            The technical tooling is improving, but reliability, false positives,
+            and operational integration remain open questions.
+          </p>
+        </div>
+        <div class="cal-meter"
+             aria-label="55 percent confidence">
+          <div class="cal-track">
+            <div class="cal-fill"
+                 data-target="55"
+                 style="--c: var(--amber)">
+            </div>
+          </div>
+          <span class="cal-pct">
+            0%
+          </span>
+        </div>
+      </div>
+      <div class="cal-row">
+        <div class="cal-text">
+          <p class="cal-claim">
+            Reasoning-model evaluations will increasingly need to measure
+            process and outcome separately
+          </p>
+          <p class="cal-reason">
+            A correct final answer can hide an unreliable process, while a
+            useful process can still end in a failed answer.
+          </p>
+        </div>
+        <div class="cal-meter"
+             aria-label="72 percent confidence">
+          <div class="cal-track">
+            <div class="cal-fill"
+                 data-target="72"
+                 style="--c: var(--teal)">
+            </div>
+          </div>
+          <span class="cal-pct">
+            0%
+          </span>
+        </div>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
+<!-- NOTES -->
+<section class="notes" id="notes">
+  <div class="section-inner">
+    <p class="section-eyebrow">// notes</p>
+    <h2 class="section-title">
+      Research notes
+    </h2>
+    <p class="section-lede">
+      Short write-ups and experiment logs — including results that may change
+      as the sample grows.
+    </p>
+    <div class="notes-list">
+      <a class="note-row"
+         href="https://github.com/fahdev789/WordBoundaryBench"
+         target="_blank"
+         rel="noopener">
+        <span class="note-date">
+          2026.09
+        </span>
+        <span class="note-title">
+          Reasoning behaviour versus final-answer compliance
+        </span>
+        <span class="note-arrow">
+          →
+        </span>
+      </a>
+      <a class="note-row"
+         href="https://github.com/fahdev789/eval-awareness-fahad-case-study"
+         target="_blank"
+         rel="noopener">
+        <span class="note-date">
+          2026.08
+        </span>
+        <span class="note-title">
+          Eval awareness and model behaviour
+        </span>
+        <span class="note-arrow">
+          →
+        </span>
+      </a>
+      <a class="note-row"
+         href="https://github.com/fahdev789/CoTControl"
+         target="_blank"
+         rel="noopener">
+        <span class="note-date">
+          2026.08
+        </span>
+        <span class="note-title">
+          Reasoning length and chain-of-thought controllability
+        </span>
+        <span class="note-arrow">
+          →
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
 </main>
-
+<!-- CONTACT -->
 <footer class="contact" id="contact">
   <div class="section-inner contact-inner">
     <div>
-      <p class="section-eyebrow">// get in touch</p>
-      <h2 class="section-title">Open to collaboration on model evaluations, chain-of-thought research, and AI safety.</h2>
+      <p class="section-eyebrow">
+        // get in touch
+      </p>
+      <h2 class="section-title">
+        Open to collaboration on model evaluations,
+        reasoning research, and AI safety.
+      </h2>
     </div>
     <div class="contact-links">
-      <a href="mailto:afahad8990@gmail.com">afahad8990@gmail.com</a>
-      <a href="https://github.com/fahdev789" target="_blank" rel="noopener">github.com/fahdev789</a>
-      <a href="https://www.linkedin.com/in/fahad-ali-33b4862b5/" target="_blank" rel="noopener">linkedin.com/in/fahad-ali-33b4862b5</a>
+      <a href="mailto:afahad8990@gmail.com">
+        afahad8990@gmail.com
+      </a>
+      <a href="https://github.com/fahdev789"
+         target="_blank"
+         rel="noopener">
+        github.com/fahdev789
+      </a>
+      <a href="https://www.linkedin.com/in/fahad-ali-33b4862b5/"
+         target="_blank"
+         rel="noopener">
+        LinkedIn
+      </a>
     </div>
   </div>
-  <p class="foot-note">Built and maintained by hand. Last recalibrated <span id="foot-date"></span>.</p>
+  <p class="foot-note">
+    Built and maintained by hand.
+    Last recalibrated <span id="foot-date"></span>.
+  </p>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
