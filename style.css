@@ -133,6 +133,11 @@ a{ color: inherit; text-decoration: none; }
   border: 1px solid var(--ink-line); padding: 2px 8px; border-radius: 20px; margin-right: 6px;
 }
 .project-link{ font-size: 0.85rem; color: var(--amber); white-space: nowrap; }
+.project-featured{
+  border-top: 1px solid rgba(237,238,233,0.14);
+  padding-top: 28px;
+}
+.project-featured h3{ font-size: 1.2rem; }
 
 /* NOTES */
 .notes{ padding: 80px 0; }
@@ -145,6 +150,17 @@ a{ color: inherit; text-decoration: none; }
 .note-date{ font-size: 0.75rem; color: var(--text-dim); width: 60px; }
 .note-title{ flex: 1; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; }
 .note-arrow{ color: var(--text-dim); }
+
+/* REVEAL */
+.reveal{
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* CONTACT / FOOTER */
 .contact{ padding: 80px 0 30px; }
@@ -162,7 +178,15 @@ a{ color: inherit; text-decoration: none; }
   .nav-links{ gap: 14px; font-size: 0.78rem; }
 }
 
+@media (max-width: 700px){
+  .nav-links{ gap: 12px; }
+  .nav-role{ display: none; }
+  .hero-headline{ font-size: clamp(2.4rem, 11vw, 4.5rem); }
+  .project-row{ gap: 14px; }
+}
+
 @media (prefers-reduced-motion: reduce){
   html{ scroll-behavior: auto; }
   .cal-fill{ transition: none; }
+  .reveal{ opacity: 1; transform: none; transition: none; }
 }
